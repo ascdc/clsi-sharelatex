@@ -19,6 +19,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get --force-yes -y inst
 	echo "export LC_ALL=zh_TW.UTF-8" >> /root/.profile && \
 	git clone "https://github.com/sharelatex/clsi-sharelatex.git" /var/www/clsi-sharelatex && \
 	npm install && \
+	npm install -g grunt-cli && \
 	grunt install
 	
 ENV LANG zh_TW.UTF-8
