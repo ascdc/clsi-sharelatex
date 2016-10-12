@@ -1,4 +1,4 @@
-FROM drush/drush
+FROM ubuntu:14.04.5
 
 # Install packages
 
