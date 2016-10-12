@@ -9,7 +9,7 @@ ADD locale-archive /usr/lib/locale/locale-archive
 ADD run.sh /run.sh
 RUN chmod +x /*.sh
 	 
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get --force-yes -y install locales curl wget python build-essential zlib1g-dev fontconfig && \
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get --force-yes -y install locales curl wget python build-essential zlib1g-dev fontconfig git && \
 	curl -sL https://deb.nodesource.com/setup | sudo bash - && \
 	apt-get update && apt-get --force-yes -y upgrade && apt-get --force-yes -y install nodejs vim latexmk texlive-xetex latex-cjk-all && \
 	locale-gen zh_TW.UTF-8 && \
